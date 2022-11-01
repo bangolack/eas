@@ -14,8 +14,11 @@ quick color options
 
 */
 //global variables
-let choiceSlider = document.querySelector("input")
 
+let reset = document.querySelector("#reset")
+console.log(reset)
+let choiceSlider = document.querySelector("input")
+let color = "white"
 document.addEventListener("DOMContentLoaded", function(){
     createBoard(16)
 })
@@ -30,7 +33,9 @@ function createBoard(boardSize){
 
     for(let i = 0; i < numOfDivs; i++){
         let div = document.createElement("div")
-        div.style.backgroundColor = "white"
+        div.addEventListener("mouseover", function(){
+            div.style.backgroundColor = "black"
+        })
         div.className = "grid-el"
         div.style.border = ("1px solid black")
         gridContainer.appendChild(div)
@@ -44,7 +49,11 @@ function getGridSize(){
     del.forEach(function(e){
         e.remove()
     })
-    createBoard(choice)
+    createBoard(choice, color)
 }
 
 choiceSlider.addEventListener("change", getGridSize)
+
+reset.addEventListener("click", function(){
+    getGridSize()
+} )
