@@ -33,9 +33,8 @@ function createBoard(boardSize){
 
     for(let i = 0; i < numOfDivs; i++){
         let div = document.createElement("div")
-        div.addEventListener("mouseover", function(){
-            div.style.backgroundColor = "black"
-        })
+        div.addEventListener("mouseover", colorDiv
+        )
         div.className = "grid-el"
         div.style.border = ("1px solid black")
         gridContainer.appendChild(div)
@@ -49,7 +48,21 @@ function getGridSize(){
     del.forEach(function(e){
         e.remove()
     })
-    createBoard(choice, color)
+    createBoard(choice)
+}
+
+function setColor(colorChoice){
+    color = colorChoice
+}
+
+function colorDiv(){
+    if (color === "blue"){
+        this.style.backgroundColor = "blue"
+    }
+    else{
+        this.style.backgroundColor = "black"
+    }
+
 }
 
 choiceSlider.addEventListener("change", getGridSize)
