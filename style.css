@@ -6,14 +6,21 @@
     height: 500px;
     width: 500px;
     border: 1px solid black;
-    bottom: -40px;
+    bottom: -45px;
     
     
+}
+span{
+    position: relative;
+    bottom: -18px;
+    left: -14px;
+    color: yellow;
 }
 
 h1{
     font-size: 80px;
     text-align: left;
+    
 }
 
 body{
@@ -59,7 +66,9 @@ a>svg{
 }
 
 .btn{
+   
     cursor: pointer;
+    margin-bottom: 20px;
     font-size: 20px;
     font-weight: 700;
     padding: 5px;
