@@ -1,22 +1,102 @@
 
 #grid-container{
     display: grid;
-   
+    background-color: white;
+   position: relative;
     height: 500px;
     width: 500px;
     border: 1px solid black;
+    bottom: -40px;
     
     
 }
 
-
+h1{
+    font-size: 80px;
+    text-align: left;
+}
 
 body{
    display: flex;
     height: 100vh;
     width: 100vw;
-    background-color: aqua;
-    justify-content: space-around;
+    flex-direction: column;
+    background: linear-gradient(to right, red, yellow);
+    justify-content: center;
+    
     align-items: center;
     
 }   
+#content-container{
+    display: flex;
+    
+    background-color: rgb(20, 20, 20, .0);
+    justify-content: center;
+    
+    align-items: center;
+}
+
+
+#options-container{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+margin: 100px;
+align-items: center;
+gap: 25px;
+}
+
+a>svg{
+    text-align: center;
+}
+
+#footer{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin: 50px;
+    gap: 20px;
+}
+
+.btn{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 5px;
+    max-height: 50px;
+   max-width: 125px;
+    border-radius: 100000px;
+    height: 100px;
+    width: 150px;
+    color: white;
+    border: none;
+    box-shadow: 15px 15px 30px black, -5px -5px 30px rgb(249, 169, 169)
+}
+
+#grid-size{
+    border-radius: 100000px;
+    height: 25px;
+    width: 200px;
+   cursor: pointer;
+   appearance: none;
+   background: black;
+   box-shadow: 1px 1px 20px #000000, 0px 0px 20px #acb802;
+    
+}
+
+#black-btn{
+    background: black;
+}
+
+#blue-btn{
+    background-color: blue;
+}
+
+#random-btn{
+    background: linear-gradient(to right, green, yellow);
+    color: black;
+}
+
+#reset{
+    color: black;
+}
